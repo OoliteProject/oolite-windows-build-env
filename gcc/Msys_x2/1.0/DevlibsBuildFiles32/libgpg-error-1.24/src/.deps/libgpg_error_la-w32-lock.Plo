@@ -1,0 +1,89 @@
+libgpg_error_la-w32-lock.lo: w32-lock.c ../config.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h \
+ gpg-error.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnt.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winerror.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetsd.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack4.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/poppack.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wincon.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winbase.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wingdi.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winuser.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnls.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winver.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnetwk.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsvc.h \
+ lock.h w32-lock-obj.h
+
+../config.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h:
+
+gpg-error.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnt.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winerror.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetsd.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack4.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/poppack.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wincon.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winbase.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wingdi.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winuser.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnls.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winver.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnetwk.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsvc.h:
+
+lock.h:
+
+w32-lock-obj.h:

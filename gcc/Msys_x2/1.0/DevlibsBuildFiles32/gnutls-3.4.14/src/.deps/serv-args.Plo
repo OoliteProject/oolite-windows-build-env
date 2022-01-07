@@ -1,0 +1,63 @@
+serv-args.lo: serv-args.c serv-args.h ../config.h \
+ ../src/libopts/autoopts/options.h gl/sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ gl/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ gl/stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/limits.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdbool.h \
+ gl/gettext.h gl/string.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h \
+ gl/stdlib.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ gl/errno.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h
+
+serv-args.h:
+
+../config.h:
+
+../src/libopts/autoopts/options.h:
+
+gl/sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+gl/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+gl/stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/limits.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdbool.h:
+
+gl/gettext.h:
+
+gl/string.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h:
+
+gl/stdlib.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+gl/errno.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h:

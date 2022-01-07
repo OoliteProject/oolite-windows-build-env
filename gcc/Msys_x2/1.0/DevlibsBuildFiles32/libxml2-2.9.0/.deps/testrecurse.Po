@@ -1,0 +1,267 @@
+testrecurse.o: testrecurse.c libxml.h config.h \
+ include/libxml/xmlversion.h include/libxml/xmlexports.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ansidecl.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/string.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/stat.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/fcntl.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/io.h \
+ include/libxml/parser.h include/libxml/tree.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/limits.h \
+ include/libxml/xmlstring.h include/libxml/xmlregexp.h \
+ include/libxml/dict.h include/libxml/hash.h include/libxml/valid.h \
+ include/libxml/xmlerror.h include/libxml/list.h \
+ include/libxml/xmlautomata.h include/libxml/entities.h \
+ include/libxml/encoding.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/iconv.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/errno.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wchar.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wctype.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdint.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdint.h \
+ include/libxml/xmlIO.h include/libxml/globals.h include/libxml/SAX.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h \
+ include/libxml/xlink.h include/libxml/SAX2.h include/libxml/xmlmemory.h \
+ include/libxml/threads.h include/libxml/uri.h include/libxml/xmlreader.h \
+ include/libxml/relaxng.h include/libxml/xmlschemas.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/windows.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/windef.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnt.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winerror.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/basetsd.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pshpack4.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/poppack.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wincon.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winbase.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wingdi.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winuser.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnls.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winver.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnetwk.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winreg.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winsvc.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/cderr.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/dde.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ddeml.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/dlgs.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/imm.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/lzexpand.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/mmsystem.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/nb30.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpc.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcdce.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/basetyps.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcdcep.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnsi.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnterr.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/shellapi.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pshpack2.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winperf.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/commdlg.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winspool.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winsock2.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ole2.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objbase.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcndr.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnsip.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objfwd.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wtypes.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/unknwn.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objidl.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/cguid.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/olectlid.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oleauto.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oaidl.h \
+ c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oleidl.h
+
+libxml.h:
+
+config.h:
+
+include/libxml/xmlversion.h:
+
+include/libxml/xmlexports.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ansidecl.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stddef.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdarg.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/types.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/string.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/sys/stat.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/fcntl.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/io.h:
+
+include/libxml/parser.h:
+
+include/libxml/tree.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/limits.h:
+
+include/libxml/xmlstring.h:
+
+include/libxml/xmlregexp.h:
+
+include/libxml/dict.h:
+
+include/libxml/hash.h:
+
+include/libxml/valid.h:
+
+include/libxml/xmlerror.h:
+
+include/libxml/list.h:
+
+include/libxml/xmlautomata.h:
+
+include/libxml/entities.h:
+
+include/libxml/encoding.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/iconv.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/errno.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wchar.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wctype.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/include/stdint.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdint.h:
+
+include/libxml/xmlIO.h:
+
+include/libxml/globals.h:
+
+include/libxml/SAX.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h:
+
+include/libxml/xlink.h:
+
+include/libxml/SAX2.h:
+
+include/libxml/xmlmemory.h:
+
+include/libxml/threads.h:
+
+include/libxml/uri.h:
+
+include/libxml/xmlreader.h:
+
+include/libxml/relaxng.h:
+
+include/libxml/xmlschemas.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/windows.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/windef.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnt.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winerror.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/basetsd.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pshpack4.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/poppack.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wincon.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winbase.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wingdi.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winuser.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnls.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winver.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winnetwk.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winreg.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winsvc.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/cderr.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/dde.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ddeml.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/dlgs.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/imm.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/lzexpand.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/mmsystem.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/nb30.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpc.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcdce.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/basetyps.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcdcep.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnsi.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnterr.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/shellapi.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pshpack2.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winperf.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/commdlg.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winspool.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/winsock2.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/ole2.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objbase.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcndr.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/rpcnsip.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objfwd.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/wtypes.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/unknwn.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/objidl.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/cguid.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/olectlid.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oleauto.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oaidl.h:
+
+c:\drived\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/oleidl.h:

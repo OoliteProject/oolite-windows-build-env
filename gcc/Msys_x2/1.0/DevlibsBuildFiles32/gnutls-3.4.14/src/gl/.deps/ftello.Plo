@@ -1,0 +1,61 @@
+ftello.lo: ftello.c ../../config.h stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h \
+ sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ unistd.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/unistd.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/io.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/process.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/getopt.h \
+ stdlib.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ stdio-impl.h errno.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h
+
+../../config.h:
+
+stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:
+
+sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+unistd.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/unistd.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/io.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/process.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/getopt.h:
+
+stdlib.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+stdio-impl.h:
+
+errno.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h:

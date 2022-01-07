@@ -1,0 +1,13 @@
+1. Go to gnustep-make-2.4.0
+2. Type ./configure --prefix=/d/gstep1201
+3. Type make install
+4. Go to gnustep-objc-1.6.0
+5. Execute on the shell: . /d/gstep1201/System/Library/Makefiles/GNUstep.sh (note the dot followed by space at the start).
+6. Type make, make install
+7. Go to gnustep-make-2.4.0 again
+8. Type make distclean, ./configure --prefix=/d/gstep1201. The newly installed objc1.6 will be picked up by the script.
+9. Type make install
+10. Go to gnustep-base-1.20.1
+11. Type ./configure --prefix=/d/gstep1201 --with-ffi-include=/local/include --with-ffi-library=/local/lib
+12. Type make
+13. Type make install

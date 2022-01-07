@@ -1,0 +1,3 @@
+chacha20-ssse3-amd64.lo: chacha20-ssse3-amd64.S ../config.h
+
+../config.h:

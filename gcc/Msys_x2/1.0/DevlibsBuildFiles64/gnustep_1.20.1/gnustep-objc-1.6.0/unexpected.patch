@@ -1,0 +1,99 @@
+Index: libobjc/libobjc.def
+===================================================================
+--- libobjc/libobjc.def	(Revision 144360)
++++ libobjc/libobjc.def	(Arbeitskopie)
+@@ -38,6 +38,7 @@
+ objc_mutex_lock
+ objc_mutex_trylock
+ objc_mutex_unlock
++_objc_unexpected_exception
+ objc_thread_detach
+ objc_thread_exit
+ objc_thread_get_data
+Index: libobjc/exception.c
+===================================================================
+--- libobjc/exception.c	(Revision 144360)
++++ libobjc/exception.c	(Arbeitskopie)
+@@ -86,6 +86,11 @@
+   unsigned char call_site_encoding;
+ };
+ 
++/* This hook allows libraries to sepecify special actions when an
++   exception is thrown without a handler in place.
++ */
++void (*_objc_unexpected_exception) (id exception); /* !T:SAFE */
++
+ static const unsigned char *
+ parse_lsda_header (struct _Unwind_Context *context, const unsigned char *p,
+ 		   struct lsda_header_info *info)
+@@ -486,5 +491,9 @@
+ #endif
+ 
+   /* Some sort of unwinding error.  */
++  if (_objc_unexpected_exception != 0)
++    {
++      (*_objc_unexpected_exception) (value);
++    }
+   abort ();
+ }
+Index: libobjc/objc/objc-api.h
+===================================================================
+--- libobjc/objc/objc-api.h	(Revision 144360)
++++ libobjc/objc/objc-api.h	(Arbeitskopie)
+@@ -430,6 +430,12 @@
+ objc_EXPORT IMP (*__objc_msg_forward)(SEL);
+ objc_EXPORT IMP (*__objc_msg_forward2)(id, SEL);
+ 
++/*
++**  Hook for uncaught exceptions.
++*/
++objc_EXPORT void (*_objc_unexpected_exception)(id);
++
++
+ Method_t class_get_class_method(MetaClass _class, SEL aSel);
+ 
+ Method_t class_get_instance_method(Class _class, SEL aSel);
+Index: gcc/testsuite/objc/execute/exceptions/handler-1.m
+===================================================================
+--- gcc/testsuite/objc/execute/exceptions/handler-1.m	(Revision 0)
++++ gcc/testsuite/objc/execute/exceptions/handler-1.m	(Revision 0)
+@@ -0,0 +1,38 @@
++/* Test custom exception handlers  */
++/* Author: David Ayers */
++
++#include <objc/objc-api.h>
++#include <objc/Object.h>
++#include <stdio.h>
++#include <stdlib.h>
++
++static unsigned int handlerExpected = 0;
++
++void
++my_exception_handler(id excp)
++{
++  /* Returning from the handler would abort.  */
++  if (handlerExpected)
++    exit(0);
++
++  abort();
++}
++
++int 
++main(int argc, char *argv[])
++{
++  _objc_unexpected_exception = my_exception_handler;
++
++  @try
++    {
++      @throw [Object new];
++    }
++  @catch (id exc)
++    {
++      handlerExpected = 1;
++    }
++
++  @throw [Object new];
++  abort();
++  return 0;
++}
+

@@ -1,0 +1,3 @@
+cipher-gcm-armv8-aarch32-ce.lo: cipher-gcm-armv8-aarch32-ce.S ../config.h
+
+../config.h:

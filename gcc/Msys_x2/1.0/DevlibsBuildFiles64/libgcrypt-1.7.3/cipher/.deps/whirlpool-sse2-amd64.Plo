@@ -1,0 +1,3 @@
+whirlpool-sse2-amd64.lo: whirlpool-sse2-amd64.S ../config.h
+
+../config.h:

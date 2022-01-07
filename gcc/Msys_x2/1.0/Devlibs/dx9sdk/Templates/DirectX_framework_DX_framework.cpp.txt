@@ -1,0 +1,458 @@
+//-----------------------------------------------------------------------------
+// File: DX_framework.cpp
+//
+// Desc: DirectX window application created by the DirectX AppWizard
+//-----------------------------------------------------------------------------
+#define STRICT
+#include <windows.h>
+#include <basetsd.h>
+#include <math.h>
+#include <stdio.h>
+#include <DXErr9.h>
+#include <tchar.h>
+#include "DXUtil.h"
+#include "resource.h"
+#include "DX_framework.h"
+
+
+
+//-----------------------------------------------------------------------------
+// Function prototypes 
+//-----------------------------------------------------------------------------
+LRESULT CALLBACK StaticMsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
+
+
+
+
+//-----------------------------------------------------------------------------
+// Global access to the app (needed for the global WndProc())
+//-----------------------------------------------------------------------------
+CMyApplication*    g_pApp  = NULL;
+HINSTANCE          g_hInst = NULL;
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: WinMain()
+// Desc: Application entry point
+//-----------------------------------------------------------------------------
+INT WINAPI WinMain( HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow )
+{
+    UNREFERENCED_PARAMETER( nCmdShow );
+    CMyApplication app;
+
+    g_hInst = hInstance;
+
+    if( FAILED( app.Create( hInstance ) ) )
+        return 0;
+
+    return app.Run();
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: CMyApplication()
+// Desc: Constructor
+//-----------------------------------------------------------------------------
+CMyApplication::CMyApplication()
+{
+    g_pApp                      = this;
+
+    m_hWnd                      = NULL;
+    m_strWindowTitle            = TEXT( "DX_framework" );
+    m_dwCreationWidth           = 500;
+    m_dwCreationHeight          = 375;
+    m_bLoadingApp               = TRUE;
+
+
+    ZeroMemory( &m_UserInput, sizeof(m_UserInput) );
+    m_fWorldRotX                = 0.0f;
+    m_fWorldRotY                = 0.0f;
+
+    // Read settings from registry
+    ReadSettings();
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: ~CMyApplication()
+// Desc: Application destructor 
+//-----------------------------------------------------------------------------
+CMyApplication::~CMyApplication()
+{
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: OneTimeSceneInit()
+// Desc: Called during initial app startup, this function performs all the
+//       permanent initialization.
+//-----------------------------------------------------------------------------
+HRESULT CMyApplication::OneTimeSceneInit()
+{
+    // TODO: perform one time initialization
+
+    // Drawing loading status message until app finishes loading
+    SendMessage( m_hWnd, WM_PAINT, 0, 0 );
+
+    m_bLoadingApp = FALSE;
+
+    return S_OK;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: ReadSettings()
+// Desc: Read the app settings from the registry
+//-----------------------------------------------------------------------------
+VOID CMyApplication::ReadSettings()
+{
+    HKEY hkey;
+    if( ERROR_SUCCESS == RegCreateKeyEx( HKEY_CURRENT_USER, DXAPP_KEY, 
+        0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hkey, NULL ) )
+    {
+        // TODO: change as needed
+
+        // Read the stored window width/height.  This is just an example,
+        // of how to use DXUtil_Read*() functions.
+        DXUtil_ReadIntRegKey( hkey, TEXT("Width"), &m_dwCreationWidth, m_dwCreationWidth );
+        DXUtil_ReadIntRegKey( hkey, TEXT("Height"), &m_dwCreationHeight, m_dwCreationHeight );
+
+        RegCloseKey( hkey );
+    }
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: WriteSettings()
+// Desc: Write the app settings to the registry
+//-----------------------------------------------------------------------------
+VOID CMyApplication::WriteSettings()
+{
+    HKEY hkey;
+
+    if( ERROR_SUCCESS == RegCreateKeyEx( HKEY_CURRENT_USER, DXAPP_KEY, 
+        0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hkey, NULL ) )
+    {
+        // TODO: change as needed
+
+        // Write the window width/height.  This is just an example,
+        // of how to use DXUtil_Write*() functions.
+        DXUtil_WriteIntRegKey( hkey, TEXT("Width"), m_dwCreationWidth );
+        DXUtil_WriteIntRegKey( hkey, TEXT("Height"), m_dwCreationHeight );
+
+        RegCloseKey( hkey );
+    }
+}
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: FrameMove()
+// Desc: Called once per frame, the call is the entry point for animating
+//       the scene.
+//-----------------------------------------------------------------------------
+HRESULT CMyApplication::FrameMove()
+{
+    // TODO: update world
+
+    // Update user input state
+    UpdateInput( &m_UserInput );
+
+    // Update the world state according to user input
+
+    if( m_UserInput.bRotateLeft && !m_UserInput.bRotateRight )
+        m_fWorldRotY += m_fElapsedTime;
+    else if( m_UserInput.bRotateRight && !m_UserInput.bRotateLeft )
+        m_fWorldRotY -= m_fElapsedTime;
+
+    if( m_UserInput.bRotateUp && !m_UserInput.bRotateDown )
+        m_fWorldRotX += m_fElapsedTime;
+    else if( m_UserInput.bRotateDown && !m_UserInput.bRotateUp )
+        m_fWorldRotX -= m_fElapsedTime;
+
+    return S_OK;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: UpdateInput()
+// Desc: Update the user input.  Called once per frame 
+//-----------------------------------------------------------------------------
+void CMyApplication::UpdateInput( UserInput* pUserInput )
+{
+    pUserInput->bRotateUp    = ( m_bHasFocus && (GetAsyncKeyState( VK_UP )    & 0x8000) == 0x8000 );
+    pUserInput->bRotateDown  = ( m_bHasFocus && (GetAsyncKeyState( VK_DOWN )  & 0x8000) == 0x8000 );
+    pUserInput->bRotateLeft  = ( m_bHasFocus && (GetAsyncKeyState( VK_LEFT )  & 0x8000) == 0x8000 );
+    pUserInput->bRotateRight = ( m_bHasFocus && (GetAsyncKeyState( VK_RIGHT ) & 0x8000) == 0x8000 );
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: Render()
+// Desc: Called once per frame, the call is the entry point for rendering the 
+//       world.
+//-----------------------------------------------------------------------------
+HRESULT CMyApplication::Render()
+{
+    // TODO: render world
+
+    static COLORREF clrNormal  = RGB(255,255,0);
+    TCHAR       szMsg[MAX_PATH] = TEXT("");
+    HDC         hDC;
+    RECT        rc;
+
+    GetClientRect( m_hWnd, &rc ); 
+    int nNextLine = rc.bottom;
+ 
+    hDC = GetDC( m_hWnd );
+
+    // Set background and text colors
+    HBRUSH hBrushBackground = CreateSolidBrush( RGB(0,0,255) );
+    FillRect( hDC, &rc, hBrushBackground );
+    DeleteObject( hBrushBackground );
+    SetBkColor( hDC, RGB(0,0,255) );
+    SetTextColor( hDC, clrNormal );
+
+    wsprintf( szMsg, TEXT("Arrow keys: Up=%d Down=%d Left=%d Right=%d"), 
+              m_UserInput.bRotateUp, m_UserInput.bRotateDown, m_UserInput.bRotateLeft, m_UserInput.bRotateRight );
+    nNextLine -= 20; TextOut( hDC, 2, nNextLine, szMsg, lstrlen(szMsg) );
+
+    sprintf( szMsg, TEXT("World State: %0.3f, %0.3f"), 
+                    m_fWorldRotX, m_fWorldRotY );
+    nNextLine -= 20; TextOut( hDC, 2, nNextLine, szMsg, lstrlen(szMsg) );
+
+    lstrcpy( szMsg, TEXT("Use arrow keys to update input") );
+    nNextLine -= 20; TextOut( hDC, 2, nNextLine, szMsg, lstrlen(szMsg) );
+
+    ReleaseDC( m_hWnd, hDC );
+
+    return S_OK;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: StaticMsgProc()
+// Desc: Static msg handler which passes messages to the application class.
+//-----------------------------------------------------------------------------
+LRESULT CALLBACK StaticMsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam )
+{
+    return g_pApp->MsgProc( hWnd, uMsg, wParam, lParam );
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: MainWndproc()
+// Desc: Callback for all Windows messages
+//-----------------------------------------------------------------------------
+LRESULT CMyApplication::MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam )
+{
+    switch( msg )
+    {
+        // TODO: Repond to Windows messages as needed
+
+        case WM_COMMAND:
+        {
+            switch( LOWORD(wParam) )
+            {
+                case IDM_EXIT:
+                    PostQuitMessage( 0 );
+                    break;
+
+            }
+            break;
+        }
+
+        case WM_ACTIVATEAPP:
+            m_bHasFocus = wParam;
+            break;
+
+        case WM_ENTERSIZEMOVE:
+        case WM_ENTERMENULOOP:
+            // Halt frame movement while the app is sizing or moving
+            // or when menus are displayed
+            Pause( TRUE );
+            break;
+
+        case WM_EXITSIZEMOVE:
+        case WM_EXITMENULOOP:
+            Pause( FALSE );
+            break;
+
+        case WM_PAINT:
+        {
+            if( m_bLoadingApp )
+            {
+                // Draw on the window tell the user that the app is loading
+                // TODO: change as needed
+                HDC hDC = GetDC( hWnd );
+                TCHAR strMsg[MAX_PATH];
+                wsprintf( strMsg, TEXT("Loading... Please wait") );
+                RECT rct;
+                GetClientRect( hWnd, &rct );
+                DrawText( hDC, strMsg, -1, &rct, DT_CENTER|DT_VCENTER|DT_SINGLELINE );
+                ReleaseDC( hWnd, hDC );
+            }
+            break;
+        }
+
+        case WM_DESTROY:
+            PostQuitMessage( 0 );
+            break;
+    }
+
+    return DefWindowProc( hWnd, msg, wParam, lParam );
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: Pause()
+// Desc: Called in to toggle the pause state of the app.
+//-----------------------------------------------------------------------------
+VOID CMyApplication::Pause( BOOL bPause )
+{
+    static DWORD dwAppPausedCount = 0L;
+
+    dwAppPausedCount += ( bPause ? +1 : -1 );
+
+    // Handle the first pause request (of many, nestable pause requests)
+    if( bPause && ( 1 == dwAppPausedCount ) )
+    {
+        // Stop the scene from animating
+        DXUtil_Timer( TIMER_STOP );
+    }
+
+    if( 0 == dwAppPausedCount )
+    {
+        // Restart the timers
+        DXUtil_Timer( TIMER_START );
+    }
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: FinalCleanup()
+// Desc: Called before the app exits, this function gives the app the chance
+//       to cleanup after itself.
+//-----------------------------------------------------------------------------
+HRESULT CMyApplication::FinalCleanup()
+{
+    // TODO: Perform any final cleanup needed
+    // Write the settings to the registry
+    WriteSettings();
+
+    return S_OK;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: Create()
+// Desc: Creates the window
+//-----------------------------------------------------------------------------
+HRESULT CMyApplication::Create( HINSTANCE hInstance )
+{
+    // Register the window class
+    WNDCLASS wndClass = { CS_DBLCLKS, StaticMsgProc, 0, 0, hInstance, NULL,
+                          LoadCursor( NULL, IDC_ARROW ), 
+                          (HBRUSH)GetSysColorBrush( COLOR_WINDOW ),
+                          NULL, _T("DX_framework Class") };
+    RegisterClass( &wndClass );
+
+    // Create our main window
+    HMENU hMenu = LoadMenu( NULL, MAKEINTRESOURCE(IDR_MENU) );
+    m_hWnd = CreateWindowEx( 0, _T("DX_framework Class"), m_strWindowTitle,
+                                WS_OVERLAPPEDWINDOW|WS_VISIBLE,
+                                CW_USEDEFAULT, CW_USEDEFAULT, 
+                                m_dwCreationWidth, m_dwCreationHeight, 
+                                NULL, hMenu, hInstance, NULL );
+    if( NULL == m_hWnd )
+        return E_FAIL;
+    UpdateWindow( m_hWnd );
+
+    // Initialize the application timer
+    DXUtil_Timer( TIMER_START );
+
+    // Initialize the app's custom scene stuff
+    OneTimeSceneInit();
+
+    return S_OK;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+// Name: Run()
+// Desc: Handles the message loop and calls FrameMove() and Render() when
+//       idle.
+//-----------------------------------------------------------------------------
+INT CMyApplication::Run()
+{
+    MSG msg = {0};
+    HACCEL hAccel = LoadAccelerators( g_hInst, MAKEINTRESOURCE(IDR_MAIN_ACCEL) );
+
+    // Message loop to run the app
+    for(;;)
+    {
+        if( PeekMessage( &msg, NULL, 0, 0, PM_NOREMOVE ) )
+        {
+            if( FALSE == GetMessage( &msg, NULL, 0, 0 ) )
+                break;
+
+            if( 0 == TranslateAccelerator( m_hWnd, hAccel, &msg ) )
+            {
+                TranslateMessage( &msg );
+                DispatchMessage( &msg );
+            }
+        }
+        else
+        {
+            // Update the time variables
+            m_fTime        = DXUtil_Timer( TIMER_GETAPPTIME );
+            m_fElapsedTime = DXUtil_Timer( TIMER_GETELAPSEDTIME );
+
+            // This app uses idle time processing for the game loop
+            if( FAILED( FrameMove() ) )
+                SendMessage( m_hWnd, WM_DESTROY, 0, 0 );
+            if( FAILED( Render() ) ) 
+                SendMessage( m_hWnd, WM_DESTROY, 0, 0 );
+
+            Sleep( 20 );
+        }
+    }
+
+    FinalCleanup();
+
+    return (INT)msg.wParam;
+}
+
+
+
+

@@ -1,0 +1,34 @@
+libgpg_error_la-visibility.lo: visibility.c ../config.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h \
+ gpgrt-int.h gpg-error.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h \
+ visibility.h estream-printf.h
+
+../config.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:
+
+gpgrt-int.h:
+
+gpg-error.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h:
+
+visibility.h:
+
+estream-printf.h:

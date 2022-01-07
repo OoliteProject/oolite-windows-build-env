@@ -1,0 +1,13 @@
+** Environment
+ INSTALL: /bin/install -c
+
+ current directory: /c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-install-p-test
+ log file: /c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-install-p-test.log
+
+
+** Run /bin/install -c -p
+/bin/install -c -p config-install-p-test-file "/c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-install-p-test-file2"
+No error reported by /bin/install -c
+
+** Checking that the installed file exists
+Success

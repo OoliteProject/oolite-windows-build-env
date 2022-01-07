@@ -1,0 +1,3 @@
+des-amd64.lo: des-amd64.S ../config.h
+
+../config.h:

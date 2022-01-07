@@ -1,0 +1,74 @@
+floor0.lo: floor0.c \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/math.h \
+ C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/ogg.h \
+ C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/os_types.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ ../include/vorbis/codec.h codec_internal.h envelope.h mdct.h codebook.h \
+ psy.h smallft.h backends.h bitrate.h os.h ../config.h misc.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/malloc.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/memory.h \
+ highlevel.h registry.h lpc.h lsp.h scales.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/math.h:
+
+C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/ogg.h:
+
+C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/os_types.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+../include/vorbis/codec.h:
+
+codec_internal.h:
+
+envelope.h:
+
+mdct.h:
+
+codebook.h:
+
+psy.h:
+
+smallft.h:
+
+backends.h:
+
+bitrate.h:
+
+os.h:
+
+../config.h:
+
+misc.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/malloc.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/memory.h:
+
+highlevel.h:
+
+registry.h:
+
+lpc.h:
+
+lsp.h:
+
+scales.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:

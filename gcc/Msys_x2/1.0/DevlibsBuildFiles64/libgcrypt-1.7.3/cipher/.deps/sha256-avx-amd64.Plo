@@ -1,0 +1,3 @@
+sha256-avx-amd64.lo: sha256-avx-amd64.S ../config.h
+
+../config.h:

@@ -1,0 +1,78 @@
+[Template]
+ver=1
+Name=DirectX Graphics sample
+Icon=DirectX Graphics sample.ico
+Description=A basic DirectX Graphics sample showing a teapot
+Catagory=DirectX
+[Unit0]
+CppName=d3dapp.cpp
+Cpp=DirectX_Graphics_sample_d3dapp.cpp.txt
+[Unit1]
+CppName=d3denumeration.cpp
+Cpp=DirectX_Graphics_sample_d3denumeration.cpp.txt
+[Unit2]
+CppName=d3dfile.cpp
+Cpp=DirectX_Graphics_sample_d3dfile.cpp.txt
+[Unit3]
+CppName=d3dfont.cpp
+Cpp=DirectX_Graphics_sample_d3dfont.cpp.txt
+[Unit4]
+CppName=d3dsettings.cpp
+Cpp=DirectX_Graphics_sample_d3dsettings.cpp.txt
+[Unit5]
+CppName=d3dutil.cpp
+Cpp=DirectX_Graphics_sample_d3dutil.cpp.txt
+[Unit6]
+CppName=DX_graphic_sample.cpp
+Cpp=DirectX_Graphics_sample_DX_graphic_sample.cpp.txt
+[Unit7]
+CppName=DX_graphic_sample.rc
+Cpp=DirectX_Graphics_sample_DX_graphic_sample.rc.txt
+[Unit8]
+CppName=dxutil.cpp
+Cpp=DirectX_Graphics_sample_dxutil.cpp.txt
+[Unit9]
+CppName=d3dapp.h
+Cpp=DirectX_Graphics_sample_d3dapp.h.txt
+[Unit10]
+CppName=d3denumeration.h
+Cpp=DirectX_Graphics_sample_d3denumeration.h.txt
+[Unit11]
+CppName=d3dfile.h
+Cpp=DirectX_Graphics_sample_d3dfile.h.txt
+[Unit12]
+CppName=d3dfont.h
+Cpp=DirectX_Graphics_sample_d3dfont.h.txt
+[Unit13]
+CppName=d3dsettings.h
+Cpp=DirectX_Graphics_sample_d3dsettings.h.txt
+[Unit14]
+CppName=d3dutil.h
+Cpp=DirectX_Graphics_sample_d3dutil.h.txt
+[Unit15]
+CppName=DX_graphic_sample.h
+Cpp=DirectX_Graphics_sample_DX_graphic_sample.h.txt
+[Unit16]
+CppName=dxutil.h
+Cpp=DirectX_Graphics_sample_dxutil.h.txt
+[Unit17]
+CppName=resource.h
+Cpp=DirectX_Graphics_sample_resource.h.txt
+[Unit18]
+CppName=DirectX.ico
+Cpp=DirectX_Graphics_sample_DirectX.ico.txt
+[Unit19]
+CppName=readme.cpp
+Cpp=DirectX_Graphics_sample_readme.cpp.txt
+[Project]
+UnitCount=20
+Type=0
+IsCpp=1
+Compiler=-D__GNUWIN32__ -Wall -DWIN32 -DNDEBUG -D_WINDOWS -D_MBCS_@@__@@_
+CppCompiler=-D__GNUWIN32__ -Wall -DWIN32 -DNDEBUG -D_WINDOWS -D_MBCS_@@__@@_
+Linker=-ldsound -ldinput8 -ld3dx9d -ld3d9 -ld3dxof -ldxguid -lwinmm -lcomctl32 -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32_@@__@@_
+CompilerSettings=000000000000000100
+CompilerSet=0
+IncludeVersionInfo=0
+SupportXPThemes=0
+Name=Custom project

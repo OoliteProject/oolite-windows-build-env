@@ -1,0 +1,36 @@
+[Template]
+ver=1
+Name=DirectX framework
+Icon=DirectX framework.ico
+Description=An empty framework template for starting applications
+Catagory=DirectX
+[Unit0]
+CppName=DX_framework.cpp
+Cpp=DirectX_framework_DX_framework.cpp.txt
+[Unit1]
+CppName=DX_framework.rc
+Cpp=DirectX_framework_DX_framework.rc.txt
+[Unit2]
+CppName=dxutil.cpp
+Cpp=DirectX_framework_dxutil.cpp.txt
+[Unit3]
+CppName=DX_framework.h
+Cpp=DirectX_framework_DX_framework.h.txt
+[Unit4]
+CppName=dxutil.h
+Cpp=DirectX_framework_dxutil.h.txt
+[Unit5]
+CppName=resource.h
+Cpp=DirectX_framework_resource.h.txt
+[Project]
+UnitCount=6
+Type=0
+IsCpp=1
+Compiler=-D__GNUWIN32__ -Wall -DWIN32 -DNDEBUG -D_WINDOWS -D_MBCS_@@__@@_
+CppCompiler=-D__GNUWIN32__ -Wall -DWIN32 -DNDEBUG -D_WINDOWS -D_MBCS_@@__@@_
+Linker=-ldsound -ldinput8 -ld3dx9d -ld3d9 -ld3dxof -ldxguid -lwinmm -lcomctl32 -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32_@@__@@_
+CompilerSettings=000000000000000100
+CompilerSet=0
+IncludeVersionInfo=0
+SupportXPThemes=0
+Name=Custom project

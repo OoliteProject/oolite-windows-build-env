@@ -1,0 +1,30 @@
+Thread '0' waiting for signal
+Thread '0' sending signals to subthreads
+Thread '8' waiting for signal
+Thread '8' sending signals to subthreads
+Thread '1' waiting for signal
+Thread '1' sending signals to subthreads
+Thread '4' waiting for signal
+Thread '4' sending signals to subthreads
+Thread '5' waiting for signal
+Thread '5' sending signals to subthreads
+Thread '3' waiting for signal
+Thread '3' sending signals to subthreads
+Thread '9' waiting for signal
+Thread '9' sending signals to subthreads
+Thread '6' waiting for signal
+Thread '6' sending signals to subthreads
+Thread '7' waiting for signal
+Thread '7' sending signals to subthreads
+Thread '2' waiting for signal
+Thread '2' sending signals to subthreads
+Thread '0' exiting!
+Thread '4' exiting!
+Thread '2' exiting!
+Thread '1' exiting!
+Thread '9' exiting!
+Thread '6' exiting!
+Thread '8' exiting!
+Thread '3' exiting!
+Thread '5' exiting!
+Thread '7' exiting!

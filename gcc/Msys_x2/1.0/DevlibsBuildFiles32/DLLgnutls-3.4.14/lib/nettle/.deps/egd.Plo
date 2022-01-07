@@ -1,0 +1,3 @@
+egd.lo: egd.c ../../config.h
+
+../../config.h:

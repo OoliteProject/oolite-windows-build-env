@@ -1,0 +1,104 @@
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000001760ad8 in SetVMFrameRegs (f=...) at methodjit/MethodJIT.cpp:139
+139         f.cx->setCurrentRegs(&f.regs);
+(gdb) warning: (Internal error: pc 0x1760946 in read in psymtab, but not in symtab.)
+
+bt
+#0  0x0000000001760ad8 in SetVMFrameRegs (f=...)
+    at methodjit/MethodJIT.cpp:139
+#1  0x0000000001760947 in JaegerTrampoline ()
+   from c:\DriveD\OoliteProject\oo64\js32ECMAv5.dll
+#2  0x0000000001760bf7 in js::mjit::EnterMethodJIT (cx=0xbcc0060, 
+    fp=0xbcc0060, code=<optimized out>, stackLimit=<optimized out>)
+    at methodjit/MethodJIT.cpp:749
+#3  0x00000000015e2aaf in js::StackSpace::bumpCommit (this=0xbcc0060, 
+    from=<optimized out>, nvals=<optimized out>) at jscntxt.cpp:208
+#4  0x000000000bce0000 in ?? ()
+#5  0x00000000000a0000 in ?? ()
+#6  0x00000000779c5430 in ntdll!RtlNtdllName ()
+   from C:\windows\system32\ntdll.dll
+#7  0x00000000061cf4e0 in ?? ()
+#8  0x000000000bcc0060 in ?? ()
+#9  0x000000000bcc00b8 in ?? ()
+#10 0x0000000006234460 in ?? ()
+#11 0x0000000001760cdb in CheckStackAndEnterMethodJIT (code=0x59600f0, 
+    fp=0xbcc0060, cx=0xbcc0060) at methodjit/MethodJIT.cpp:778
+#12 js::mjit::JaegerShot (cx=0xbcc0060) at methodjit/MethodJIT.cpp:802
+#13 0x0000000000000000 in ?? ()
+(gdb) warning: (Internal error: pc 0x1760946 in read in psymtab, but not in symtab.)
+
+
+
+
+
+
+
+
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000171fe44 in JSContext::setCurrentRegs (
+    this=<error reading variable: can't compute CFA for this frame>, 
+    regs=<error reading variable: can't compute CFA for this frame>)
+    at jscntxt.h:1699
+1699            this->regs = regs;
+(gdb) bt
+#0  0x000000000171fe44 in JSContext::setCurrentRegs (
+    this=<error reading variable: can't compute CFA for this frame>, 
+    regs=<error reading variable: can't compute CFA for this frame>)
+    at jscntxt.h:1699
+#1  0x000000000165b629 in SetVMFrameRegs (
+    f=<error reading variable: can't compute CFA for this frame>)
+    at methodjit/MethodJIT.cpp:139
+#2  0x000000000165b667 in JaegerTrampoline () at methodjit/MethodJIT.cpp:140
+#3  0x000000000165b83b in js::mjit::EnterMethodJIT (
+    cx=<error reading variable: can't compute CFA for this frame>, 
+    fp=<error reading variable: can't compute CFA for this frame>, 
+    code=<error reading variable: can't compute CFA for this frame>, 
+    stackLimit=<error reading variable: can't compute CFA for this frame>)
+    at methodjit/MethodJIT.cpp:749
+#4  0x000000000526f4e0 in ?? ()
+#5  0x000000000000ffff in ?? ()
+#6  0x000000000148e356 in js::StackSpace::bumpCommit (
+    this=<error reading variable: can't compute CFA for this frame>, 
+    from=<error reading variable: can't compute CFA for this frame>, 
+    nvals=<error reading variable: can't compute CFA for this frame>)
+    at jscntxt.cpp:208
+#7  0x0000000000000000 in ?? ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

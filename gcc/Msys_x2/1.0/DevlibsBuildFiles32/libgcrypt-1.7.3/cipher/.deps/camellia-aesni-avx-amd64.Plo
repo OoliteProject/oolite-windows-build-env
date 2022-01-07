@@ -1,0 +1,1 @@
+camellia-aesni-avx-amd64.lo: camellia-aesni-avx-amd64.S

@@ -1,0 +1,3 @@
+The file [nsis_source_dir]\Source\tokens.cpp must be compiled WITHOUT the -O2 switch. Use the command:
+g++ -o build\release(or debug)\makensis\tokens.o -c -Wall tokens.cpp
+This creates the correct object file. The rest can be compiled using SCons normally.

@@ -1,0 +1,254 @@
+xmlmodule.lo: xmlmodule.c libxml.h config.h include/libxml/xmlversion.h \
+ include/libxml/xmlexports.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ansidecl.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h \
+ include/libxml/xmlmemory.h include/libxml/threads.h \
+ include/libxml/globals.h include/libxml/parser.h include/libxml/tree.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/limits.h \
+ include/libxml/xmlstring.h include/libxml/xmlregexp.h \
+ include/libxml/dict.h include/libxml/hash.h include/libxml/valid.h \
+ include/libxml/xmlerror.h include/libxml/list.h \
+ include/libxml/xmlautomata.h include/libxml/entities.h \
+ include/libxml/encoding.h \
+ C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/iconv.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wchar.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wctype.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h \
+ include/libxml/xmlIO.h include/libxml/SAX.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ include/libxml/xlink.h include/libxml/SAX2.h include/libxml/xmlmodule.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windef.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnt.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winerror.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetsd.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack4.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/poppack.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wincon.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winbase.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wingdi.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winuser.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnls.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winver.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnetwk.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsvc.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/cderr.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/dde.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ddeml.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/dlgs.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/imm.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/lzexpand.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/mmsystem.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/nb30.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpc.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcdce.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetyps.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcdcep.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnsi.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnterr.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/shellapi.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack2.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winperf.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/commdlg.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winspool.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsock2.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ole2.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objbase.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcndr.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnsip.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objfwd.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wtypes.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/unknwn.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objidl.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/cguid.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/olectlid.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oleauto.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oaidl.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oleidl.h \
+ elfgcchack.h
+
+libxml.h:
+
+config.h:
+
+include/libxml/xmlversion.h:
+
+include/libxml/xmlexports.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ansidecl.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdio.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdarg.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h:
+
+include/libxml/xmlmemory.h:
+
+include/libxml/threads.h:
+
+include/libxml/globals.h:
+
+include/libxml/parser.h:
+
+include/libxml/tree.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/limits.h:
+
+include/libxml/xmlstring.h:
+
+include/libxml/xmlregexp.h:
+
+include/libxml/dict.h:
+
+include/libxml/hash.h:
+
+include/libxml/valid.h:
+
+include/libxml/xmlerror.h:
+
+include/libxml/list.h:
+
+include/libxml/xmlautomata.h:
+
+include/libxml/entities.h:
+
+include/libxml/encoding.h:
+
+C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/iconv.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/errno.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wchar.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wctype.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stdint.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdint.h:
+
+include/libxml/xmlIO.h:
+
+include/libxml/SAX.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+include/libxml/xlink.h:
+
+include/libxml/SAX2.h:
+
+include/libxml/xmlmodule.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windows.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/windef.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnt.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winerror.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetsd.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack4.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/poppack.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wincon.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winbase.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wingdi.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winuser.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnls.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winver.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winnetwk.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winreg.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsvc.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/cderr.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/dde.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ddeml.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/dlgs.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/imm.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/lzexpand.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/mmsystem.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/nb30.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpc.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcdce.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/basetyps.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcdcep.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnsi.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnterr.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/shellapi.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/pshpack2.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winperf.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/commdlg.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winspool.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/winsock2.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/ole2.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objbase.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcndr.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/rpcnsip.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objfwd.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/wtypes.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/unknwn.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/objidl.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/cguid.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/olectlid.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oleauto.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oaidl.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/oleidl.h:
+
+elfgcchack.h:

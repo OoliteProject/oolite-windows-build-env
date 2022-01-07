@@ -1,0 +1,21 @@
+** Environment
+ CC: gcc
+ CFLAGS: -g -O2 -x objective-c -I. -I/mingw/../devlibs/include  -I/mingw/../devlibs/gnustep1201/System/Library/Headers -L/mingw/../devlibs/lib  -L/mingw/../devlibs/gnustep1201/System/Library/Libraries -fgnu-runtime -DGNU_RUNTIME
+ CPPFLAGS: -I/mingw/../devlibs/include
+ LDFLAGS: -L/mingw/../devlibs/lib
+ LIBS: -lobjc 
+
+ current directory: /c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-precomp-test
+ log file: /c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-precomp-test.log
+
+ CFLAGS without -x objective-c: -g -O2  -I. -I/mingw/../devlibs/include -I/mingw/../devlibs/gnustep1201/System/Library/Headers -L/mingw/../devlibs/lib -L/mingw/../devlibs/gnustep1201/System/Library/Libraries -fgnu-runtime -DGNU_RUNTIME
+
+** Compile the file without precompiled headers
+gcc -o "/c/DriveD/devlibs/gnustep_1.20.1/gnustep-make-2.4.0/config-precomp-test.out" -g -O2  -I. -I/mingw/../devlibs/include -I/mingw/../devlibs/gnustep1201/System/Library/Headers -L/mingw/../devlibs/lib -L/mingw/../devlibs/gnustep1201/System/Library/Libraries -fgnu-runtime -DGNU_RUNTIME -I/mingw/../devlibs/include -L/mingw/../devlibs/lib -lobjc  config-precomp-test.m
+C:\Users\barknikk\AppData\Local\Temp\ccykoMeh.o: In function `main':
+c:\DriveD\devlibs\gnustep_1.20.1\gnustep-make-2.4.0\config-precomp-test/config-precomp-test.m:12: undefined reference to `objc_get_class'
+c:\DriveD\devlibs\gnustep_1.20.1\gnustep-make-2.4.0\config-precomp-test/config-precomp-test.m:12: undefined reference to `objc_msg_lookup'
+C:\Users\barknikk\AppData\Local\Temp\ccykoMeh.o: In function `_objc_gnu_init':
+c:\DriveD\devlibs\gnustep_1.20.1\gnustep-make-2.4.0\config-precomp-test/config-precomp-test.m:13: undefined reference to `__objc_exec_class'
+collect2.exe: error: ld returned 1 exit status
+Failure

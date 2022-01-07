@@ -1,0 +1,153 @@
+libgnutlsxx_la-gnutlsxx.lo: gnutlsxx.cpp ../config.h \
+ includes/gnutls/gnutlsxx.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/exception \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/atomic_lockfree_defines.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/vector \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_algobase.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/functexcept.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/exception_defines.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/cpp_type_traits.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/type_traits.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/numeric_traits.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_pair.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/move.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/concept_check.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator_base_types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator_base_funcs.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/debug/debug.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/allocator.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/new_allocator.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/new \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_construct.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/alloc_traits.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_uninitialized.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_vector.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_bvector.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/range_access.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/vector.tcc \
+ includes/gnutls/gnutls.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/stddef.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/crtdefs.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_mac.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_secapi.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/vadefs.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sys/types.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_off_t.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/time.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_timeval.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sec_api/time_s.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sys/timeb.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/pthread_time.h \
+ includes/gnutls/compat.h
+
+../config.h:
+
+includes/gnutls/gnutlsxx.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/exception:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/c++config.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/atomic_lockfree_defines.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/vector:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_algobase.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/functexcept.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/exception_defines.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/cpp_type_traits.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/type_traits.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/numeric_traits.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_pair.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/move.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/concept_check.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator_base_types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator_base_funcs.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_iterator.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/debug/debug.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/allocator.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/new_allocator.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/new:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_construct.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/ext/alloc_traits.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_uninitialized.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_vector.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/stl_bvector.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/range_access.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++/bits/vector.tcc:
+
+includes/gnutls/gnutls.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/stddef.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/crtdefs.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_mac.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_secapi.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/vadefs.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sys/types.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_mingw_off_t.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/time.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/_timeval.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sec_api/time_s.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sys/timeb.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
+
+c:\developmentenvironment\gcc\msys_x2\1.0\mingw\bin\../lib/gcc/x86_64-w64-mingw32/4.7.1/../../../../x86_64-w64-mingw32/include/pthread_time.h:
+
+includes/gnutls/compat.h:

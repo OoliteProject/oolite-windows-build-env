@@ -1,0 +1,9 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:759: checking host system type
+configure:780: checking target system type
+configure:798: checking build system type
+configure:859: checking for gawk
+configure:983: checking for perl5
+configure:983: checking for perl

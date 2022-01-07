@@ -1,0 +1,240 @@
+file SCons\Config\gnu,line 161:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for memcpy requirement... 
+scons: Configure: ".sconf_temp\conftest_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_0.c <-
+  |  |
+  |  |		int __main() {
+  |  |			struct s { char c[128]; } t = { "test" };
+  |  |			return 0;
+  |  |		}
+  |  |	
+  |
+scons: Configure: ".sconf_temp\conftest_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_0.o -c .sconf_temp\conftest_0.c
+  |
+scons: Configure: Building ".sconf_temp\conftest_0.exe" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_0.exe -nostdlib -Wl,--exclude-libs,msvcrt.a -Wl,-e,___main .sconf_temp\conftest_0.o
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for memset requirement... 
+scons: Configure: ".sconf_temp\conftest_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_1.c <-
+  |  |
+  |  |		int __main() {
+  |  |			char c[128] = "test";
+  |  |			return 0;
+  |  |		}
+  |  |	
+  |
+scons: Configure: ".sconf_temp\conftest_1.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_1.o -c .sconf_temp\conftest_1.c
+  |
+scons: Configure: Building ".sconf_temp\conftest_1.exe" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_1.exe -nostdlib -Wl,--exclude-libs,msvcrt.a -Wl,-e,___main .sconf_temp\conftest_1.o
+  |
+scons: Configure: (cached) yes
+
+
+file Source\SConscript,line 62:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for main() in C library gdi32... 
+scons: Configure: ".sconf_temp\conftest_2.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_2.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_2.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_2.o -c -O2 -Wall .sconf_temp\conftest_2.c
+  |
+scons: Configure: ".sconf_temp\conftest_2.exe" is up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_2.exe -s -Wl,-Map,.sconf_temp\conftest_2.map .sconf_temp\conftest_2.o -lgdi32
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for main() in C library user32... 
+scons: Configure: ".sconf_temp\conftest_3.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_3.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_3.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_3.o -c -O2 -Wall .sconf_temp\conftest_3.c
+  |
+scons: Configure: ".sconf_temp\conftest_3.exe" is up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_3.exe -s -Wl,-Map,.sconf_temp\conftest_3.map .sconf_temp\conftest_3.o -lgdi32 -luser32
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for main() in C library version... 
+scons: Configure: ".sconf_temp\conftest_4.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_4.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_4.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_4.o -c -O2 -Wall .sconf_temp\conftest_4.c
+  |
+scons: Configure: ".sconf_temp\conftest_4.exe" is up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_4.exe -s -Wl,-Map,.sconf_temp\conftest_4.map .sconf_temp\conftest_4.o -lgdi32 -luser32 -lversion
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for main() in C library pthread... 
+scons: Configure: ".sconf_temp\conftest_5.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_5.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_5.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_5.o -c -O2 -Wall .sconf_temp\conftest_5.c
+  |
+scons: Configure: ".sconf_temp\conftest_5.exe" is up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_5.exe -s -Wl,-Map,.sconf_temp\conftest_5.map .sconf_temp\conftest_5.o -lgdi32 -luser32 -lversion -lpthread
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for main() in C library stdc++... 
+scons: Configure: ".sconf_temp\conftest_6.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_6.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_6.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_6.o -c -O2 -Wall .sconf_temp\conftest_6.c
+  |
+scons: Configure: ".sconf_temp\conftest_6.exe" is up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_6.exe -s -Wl,-Map,.sconf_temp\conftest_6.map .sconf_temp\conftest_6.o -lgdi32 -luser32 -lversion -lpthread -lstdc++
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for main() in C library iconv... 
+scons: Configure: ".sconf_temp\conftest_7.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_7.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_7.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_7.o -c -O2 -Wall .sconf_temp\conftest_7.c
+  |
+scons: Configure: Building ".sconf_temp\conftest_7.exe" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_7.exe -s -Wl,-Map,.sconf_temp\conftest_7.map .sconf_temp\conftest_7.o -lgdi32 -luser32 -lversion -lpthread -lstdc++ -liconv
+  |
+scons: Configure: (cached) no
+
+scons: Configure: Checking for main() in C library libiconv... 
+scons: Configure: ".sconf_temp\conftest_8.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_8.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp\conftest_8.o" is up to date.
+scons: Configure: The original builder output was:
+  |gcc -o .sconf_temp\conftest_8.o -c -O2 -Wall .sconf_temp\conftest_8.c
+  |
+scons: Configure: Building ".sconf_temp\conftest_8.exe" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_8.exe -s -Wl,-Map,.sconf_temp\conftest_8.map .sconf_temp\conftest_8.o -lgdi32 -luser32 -lversion -lpthread -lstdc++ -liconv
+  |
+scons: Configure: (cached) no
+
+
+file Source\Tests\SConscript,line 30:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for main() in C++ library cppunit... 
+scons: Configure: ".sconf_temp\conftest_9.cpp" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp\conftest_9.cpp <-
+  |  |
+  |  |
+  |  |#include "cppunit/extensions/HelperMacros.h"
+  |  |
+  |  |int
+  |  |main() {
+  |  |  main();
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: Building ".sconf_temp\conftest_9.o" failed in a previous run and all its sources are up to date.
+scons: Configure: The original builder output was:
+  |g++ -o .sconf_temp\conftest_9.o -c .sconf_temp\conftest_9.cpp
+  |
+scons: Configure: (cached) no
+
+

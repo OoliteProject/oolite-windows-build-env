@@ -1,0 +1,48 @@
+lsp.lo: lsp.c \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/math.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h \
+ lsp.h os.h ../config.h \
+ C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/os_types.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h \
+ misc.h ../include/vorbis/codec.h \
+ C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/ogg.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/malloc.h \
+ c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/memory.h \
+ lookup.h scales.h
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/math.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/_mingw.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/string.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/include/stddef.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/stdlib.h:
+
+lsp.h:
+
+os.h:
+
+../config.h:
+
+C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/os_types.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/sys/types.h:
+
+misc.h:
+
+../include/vorbis/codec.h:
+
+C:/DevelopmentEnvironment/GCC471/Msys_x2/1.0/mingw/../devlibs/include/ogg/ogg.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/malloc.h:
+
+c:\developmentenvironment\gcc471\msys_x2\1.0\mingw\bin\../lib/gcc/mingw32/4.7.1/../../../../include/memory.h:
+
+lookup.h:
+
+scales.h:

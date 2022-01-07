@@ -1,0 +1,2 @@
+as -o /c/DriveD/devlibs/js/src/WINNT5.1_OPT.OBJ/methodjit/TrampolinemingwX64
+.o -mtune=generic64 /c/DriveD/devlibs/js/src/methodjit/TrampolinemingwX64.s

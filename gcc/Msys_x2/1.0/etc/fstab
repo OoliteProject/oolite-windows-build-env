@@ -1,0 +1,9 @@
+C:/DevelopmentEnvironment/gcc/nsis						/nsis
+C:/DevelopmentEnvironment/gcc/svn-win32-1.4.3			/svn
+C:/DevelopmentEnvironment/SourceControl/git				/git
+
+#Uncomment below for full portability - requires also uncomment in msys.bat
+#o:/msys_x/1.0/mingw /mingw 
+#o:/svn-win32-1.4.3 /svn
+#o:/gstep1201 /OOgstep
+#o:/nsis /nsis
