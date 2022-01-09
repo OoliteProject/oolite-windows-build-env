@@ -1,0 +1,1 @@
+echo Msys CMD build
