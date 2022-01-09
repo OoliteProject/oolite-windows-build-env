@@ -61,3 +61,19 @@ cd "$HOME"
 . /mingw/../devlibs/gnustep1201/System/Library/Makefiles/GNUstep.sh
 echo GNUstep System Root is "$GNUSTEP_SYSTEM_ROOT"
 echo Target is $GNUSTEP_HOST_CPU
+
+###### Oolite changes start ######
+
+echo "Environment variables:"
+env | sort
+
+echo "Current working directory:"
+pwd
+
+if [ ! -z "$GITHUB_WORKFLOW" ]; then
+  echo "We are in Github. Let's build the project.
+  cd "$GITHUB_WORKSPACE"
+  make -fMakefile pkg-win-snapshot
+fi
+
+###### Oolite changes end   ######
