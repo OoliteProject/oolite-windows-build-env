@@ -72,7 +72,7 @@ pwd
 
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
   echo "We are in Github. Let's build the project."
-  cd "$GITHUB_WORKSPACE"
+  cd "$GITHUB_WORKSPACE/oolite"
   make -fMakefile pkg-win-snapshot
 fi
 
