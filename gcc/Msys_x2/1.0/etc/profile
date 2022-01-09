@@ -71,7 +71,7 @@ echo "Current working directory:"
 pwd
 
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
-  echo "We are in Github. Let's build the project.
+  echo "We are in Github. Let's build the project."
   cd "$GITHUB_WORKSPACE"
   make -fMakefile pkg-win-snapshot
 fi
