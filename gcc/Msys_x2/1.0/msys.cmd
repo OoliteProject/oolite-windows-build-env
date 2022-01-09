@@ -46,7 +46,7 @@ rem ember that we only execute here if we are in command.com.
 :_Windows
 
 if "x%COMSPEC%" == "x" set COMSPEC=command.com
-start /min %COMSPEC% /e:4096 /c %0 GOTO: _Resume %0 %1 %2 %3 %4 %5 %6 %7 %8 %9
+%COMSPEC% /e:4096 /c %0 GOTO: _Resume %0 %1 %2 %3 %4 %5 %6 %7 %8 %9
 goto EOF
 
 rem ember that we execute here if we recursed.
