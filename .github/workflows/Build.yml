@@ -1,8 +1,8 @@
 name: Build
 
 on:
-#  push:
-#    branches: [ main ]
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -14,11 +14,11 @@ jobs:
       with:
         path: DevelopmentEnvironment
 
-    - name: Create Release
+    - name: Create Archive
       run: |
         Compress-Archive -Path DevelopmentEnvironment -DestinationPath DevelopmentEnvironment.zip
 
-    - name: Create Release
+    - name: Publish Archive
       id: create_release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
