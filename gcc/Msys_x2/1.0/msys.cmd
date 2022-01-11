@@ -1,10 +1,4 @@
-echo Msys CMD build
-
-echo Environment:
-set
-
-
-rem @echo off
+@echo off
 
 rem - start of Oolite specific changes
 
