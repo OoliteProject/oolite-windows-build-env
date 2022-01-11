@@ -1,6 +1,6 @@
 D:/a/oolite/oolite/DevelopmentEnvironment/gcc/nsis						/nsis
 D:/a/oolite/oolite/DevelopmentEnvironment/SourceControl/git				/git
-C:/DevelopmentEnvironment/gcc/svn-win32-1.4.3			/svn
+D:/a/oolite/oolite/DevelopmentEnvironment/gcc/svn-win32-1.4.3			/svn
 
 #Uncomment below for full portability - requires also uncomment in msys.bat
 #o:/msys_x/1.0/mingw /mingw 
