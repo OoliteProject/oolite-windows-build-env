@@ -307,14 +307,14 @@ static void WIN_GetKeyboardState(void)
 			state |= KMOD_RCTRL;
 			kstate[SDLK_RCTRL] = SDL_PRESSED;
 		}
-		if ( keyboard[VK_LMENU] & 0x80) {
+		/*if ( keyboard[VK_LMENU] & 0x80) {
 			state |= KMOD_LALT;
 			kstate[SDLK_LALT] = SDL_PRESSED;
 		}
 		if ( keyboard[VK_RMENU] & 0x80) {
 			state |= KMOD_RALT;
 			kstate[SDLK_RALT] = SDL_PRESSED;
-		}
+		}*/
 		if ( keyboard[VK_NUMLOCK] & 0x01) {
 			state |= KMOD_NUM;
 			kstate[SDLK_NUMLOCK] = SDL_PRESSED;
