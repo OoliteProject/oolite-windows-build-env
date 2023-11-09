@@ -43,6 +43,8 @@ fi
 
 export HOME LOGNAME MSYSTEM HISTFILE
 
+FLAVOUR=pkg-win-snapshot
+
 for i in /etc/profile.d/*.sh ; do
   if [ -f $i ]; then
     . $i
@@ -73,7 +75,7 @@ pwd
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
   echo "We are in Github. Let's build the project."
   cd "$GITHUB_WORKSPACE/oolite"
-  make -fMakefile pkg-win-snapshot
+  make -fMakefile $FLAVOUR
 fi
 
 ###### Oolite changes end   ######
