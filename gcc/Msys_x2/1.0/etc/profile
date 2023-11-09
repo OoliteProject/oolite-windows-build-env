@@ -47,6 +47,7 @@ FLAVOUR=pkg-win-snapshot
 
 for i in /etc/profile.d/*.sh ; do
   if [ -f $i ]; then
+    echo "Sourcing $i"
     . $i
   fi
 done
@@ -73,7 +74,7 @@ echo "Current working directory:"
 pwd
 
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
-  echo "We are in Github. Let's build the project."
+  echo "We are in Github. Let's build the project with flavour $FLAVOUR."
   cd "$GITHUB_WORKSPACE/oolite"
   make -fMakefile $FLAVOUR
 fi
