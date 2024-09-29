@@ -67,7 +67,7 @@ extern "C" {
 #define NOMIRRORBITMAP (DWORD)0x80000000
 #define CAPTUREBLT (DWORD)0x40000000
 #define MAKEROP4(fore,back) (DWORD)((((back) << 8) & 0xFF000000) | (fore))
-#endif
+#endif /* NORASTEROPS */
 
 #define GDI_ERROR (__MSABI_LONG(0xFFFFFFFF))
 #define HGDI_ERROR (LongToHandle(0xFFFFFFFF))
@@ -135,6 +135,9 @@ extern "C" {
 #define ETO_NUMERICSLATIN 0x0800
 #define ETO_IGNORELANGUAGE 0x1000
 #define ETO_PDY 0x2000
+#if _WIN32_WINNT >= 0x0600
+#define ETO_REVERSE_INDEX_MAP 0x10000
+#endif
 
 #define ASPECT_FILTERING 0x0001
 
@@ -217,6 +220,7 @@ extern "C" {
 #define META_CREATEBRUSHINDIRECT 0x02FC
 #define META_CREATEREGION 0x06FF
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _DRAWPATRECT {
     POINT ptPosition;
     POINT ptSize;
@@ -224,6 +228,8 @@ extern "C" {
     WORD wPattern;
   } DRAWPATRECT,*PDRAWPATRECT;
 #endif
+
+#endif /* NOMETAFILE */
 
 #define NEWFRAME 1
 #define ABORTDOC 2
@@ -312,17 +318,26 @@ extern "C" {
 #define CHECKPNGFORMAT 4120
 
 #define GET_PS_FEATURESETTING 4121
+#define GDIPLUS_TS_QUERYVER 4122
+#define GDIPLUS_TS_RECORD 4123
+
+#if _WIN32_WINNT >= 0x0600
+#define MILCORE_TS_QUERYVER_RESULT_FALSE 0x0
+#define MILCORE_TS_QUERYVER_RESULT_TRUE  0x7FFFFFFF
+#endif
 
 #define SPCLPASSTHROUGH2 4568
 
 #define PSIDENT_GDICENTRIC 0
 #define PSIDENT_PSCENTRIC 1
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _PSINJECTDATA {
     DWORD DataBytes;
     WORD InjectionPoint;
     WORD PageNumber;
   } PSINJECTDATA,*PPSINJECTDATA;
+#endif
 
 #define PSINJECT_BEGINSTREAM 1
 #define PSINJECT_PSADOBE 2
@@ -361,6 +376,8 @@ extern "C" {
 #define PSINJECT_VMSAVE 200
 #define PSINJECT_VMRESTORE 201
 
+#define PSINJECT_DLFONT 0xdddddddd
+
 #define FEATURESETTING_NUP 0
 #define FEATURESETTING_OUTPUT 1
 #define FEATURESETTING_PSLEVEL 2
@@ -372,6 +389,7 @@ extern "C" {
 #define FEATURESETTING_PRIVATE_BEGIN 0x1000
 #define FEATURESETTING_PRIVATE_END 0x1FFF
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _PSFEATURE_OUTPUT {
     WINBOOL bPageIndependent;
     WINBOOL bSetPageDevice;
@@ -384,6 +402,7 @@ extern "C" {
     LONG lWidthOffset;
     LONG lHeightOffset;
   } PSFEATURE_CUSTPAPER,*PPSFEATURE_CUSTPAPER;
+#endif
 
 #define PSPROTOCOL_ASCII 0
 #define PSPROTOCOL_BCP 1
@@ -419,6 +438,11 @@ extern "C" {
 #define OBJ_ENHMETAFILE 13
 #define OBJ_COLORSPACE 14
 
+#define GDI_OBJ_LAST OBJ_COLORSPACE
+
+#define GDI_MIN_OBJ_TYPE OBJ_PEN
+#define GDI_MAX_OBJ_TYPE GDI_OBJ_LAST
+
 #define MWT_IDENTITY 1
 #define MWT_LEFTMULTIPLY 2
 #define MWT_RIGHTMULTIPLY 3
@@ -427,6 +451,7 @@ extern "C" {
 #define MWT_MAX MWT_RIGHTMULTIPLY
 
 #define _XFORM_
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagXFORM {
     FLOAT eM11;
     FLOAT eM12;
@@ -451,7 +476,7 @@ extern "C" {
     BYTE rgbtBlue;
     BYTE rgbtGreen;
     BYTE rgbtRed;
-  } RGBTRIPLE;
+  } RGBTRIPLE,*PRGBTRIPLE,*NPRGBTRIPLE,*LPRGBTRIPLE;
 #include <poppack.h>
 
   typedef struct tagRGBQUAD {
@@ -460,7 +485,11 @@ extern "C" {
     BYTE rgbRed;
     BYTE rgbReserved;
   } RGBQUAD;
+#endif
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef RGBQUAD *LPRGBQUAD;
+#endif
 
 #define CS_ENABLE __MSABI_LONG(0x00000001)
 #define CS_DISABLE __MSABI_LONG(0x00000002)
@@ -471,6 +500,7 @@ extern "C" {
 #define LCS_sRGB 'sRGB'
 #define LCS_WINDOWS_COLOR_SPACE 'Win '
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef LONG LCSCSTYPE;
 #define LCS_CALIBRATED_RGB __MSABI_LONG(0x00000000)
 
@@ -506,16 +536,22 @@ extern "C" {
     FXPT2DOT30 ciexyzY;
     FXPT2DOT30 ciexyzZ;
   } CIEXYZ;
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef CIEXYZ *LPCIEXYZ;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagICEXYZTRIPLE {
     CIEXYZ ciexyzRed;
     CIEXYZ ciexyzGreen;
     CIEXYZ ciexyzBlue;
   } CIEXYZTRIPLE;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef CIEXYZTRIPLE *LPCIEXYZTRIPLE;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagLOGCOLORSPACEA {
     DWORD lcsSignature;
     DWORD lcsVersion;
@@ -544,7 +580,9 @@ extern "C" {
 
   __MINGW_TYPEDEF_AW(LOGCOLORSPACE)
   __MINGW_TYPEDEF_AW(LPLOGCOLORSPACE)
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagBITMAPCOREHEADER {
     DWORD bcSize;
     WORD bcWidth;
@@ -552,7 +590,9 @@ extern "C" {
     WORD bcPlanes;
     WORD bcBitCount;
   } BITMAPCOREHEADER,*LPBITMAPCOREHEADER,*PBITMAPCOREHEADER;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagBITMAPINFOHEADER {
     DWORD biSize;
     LONG biWidth;
@@ -566,7 +606,9 @@ extern "C" {
     DWORD biClrUsed;
     DWORD biClrImportant;
   } BITMAPINFOHEADER,*LPBITMAPINFOHEADER,*PBITMAPINFOHEADER;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct {
     DWORD bV4Size;
     LONG bV4Width;
@@ -616,6 +658,7 @@ extern "C" {
     DWORD bV5ProfileSize;
     DWORD bV5Reserved;
   } BITMAPV5HEADER,*LPBITMAPV5HEADER,*PBITMAPV5HEADER;
+#endif
 
 #define PROFILE_LINKED 'LINK'
 #define PROFILE_EMBEDDED 'MBED'
@@ -627,11 +670,14 @@ extern "C" {
 #define BI_JPEG __MSABI_LONG(4)
 #define BI_PNG __MSABI_LONG(5)
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagBITMAPINFO {
     BITMAPINFOHEADER bmiHeader;
     RGBQUAD bmiColors[1];
   } BITMAPINFO,*LPBITMAPINFO,*PBITMAPINFO;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagBITMAPCOREINFO {
     BITMAPCOREHEADER bmciHeader;
     RGBTRIPLE bmciColors[1];
@@ -646,10 +692,13 @@ extern "C" {
     DWORD bfOffBits;
   } BITMAPFILEHEADER,*LPBITMAPFILEHEADER,*PBITMAPFILEHEADER;
 #include <poppack.h>
+#endif
 
 #define MAKEPOINTS(l) (*((POINTS *)&(l)))
 
 #ifndef NOFONTSIG
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagFONTSIGNATURE {
     DWORD fsUsb[4];
     DWORD fsCsb[2];
@@ -660,21 +709,24 @@ extern "C" {
     UINT ciACP;
     FONTSIGNATURE fs;
   } CHARSETINFO,*PCHARSETINFO,*NPCHARSETINFO,*LPCHARSETINFO;
+#endif
 
 #define TCI_SRCCHARSET 1
 #define TCI_SRCCODEPAGE 2
 #define TCI_SRCFONTSIG 3
 #define TCI_SRCLOCALE 0x1000
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagLOCALESIGNATURE {
     DWORD lsUsb[4];
     DWORD lsCsbDefault[2];
     DWORD lsCsbSupported[2];
   } LOCALESIGNATURE,*PLOCALESIGNATURE,*LPLOCALESIGNATURE;
 #endif
-
+#endif
 
 #ifndef NOMETAFILE
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagHANDLETABLE {
     HGDIOBJ objectHandle[1];
   } HANDLETABLE,*PHANDLETABLE,*LPHANDLETABLE;
@@ -684,7 +736,11 @@ extern "C" {
     WORD rdFunction;
     WORD rdParm[1];
   } METARECORD;
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagMETARECORD UNALIGNED *PMETARECORD;
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagMETARECORD UNALIGNED *LPMETARECORD;
 
   typedef struct tagMETAFILEPICT {
@@ -693,7 +749,9 @@ extern "C" {
     LONG yExt;
     HMETAFILE hMF;
   } METAFILEPICT,*LPMETAFILEPICT;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #include <pshpack2.h>
   typedef struct tagMETAHEADER {
     WORD mtType;
@@ -708,7 +766,9 @@ extern "C" {
   typedef struct tagMETAHEADER UNALIGNED *LPMETAHEADER;
 
 #include <poppack.h>
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagENHMETARECORD {
     DWORD iType;
     DWORD nSize;
@@ -737,6 +797,7 @@ extern "C" {
     SIZEL szlMicrometers;
   } ENHMETAHEADER,*PENHMETAHEADER,*LPENHMETAHEADER;
 #endif
+#endif /* NOMETAFILE */
 
 #ifndef NOTEXTMETRIC
 #define TMPF_FIXED_PITCH 0x01
@@ -744,14 +805,19 @@ extern "C" {
 #define TMPF_DEVICE 0x08
 #define TMPF_TRUETYPE 0x04
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #if defined(UNICODE)
   typedef WCHAR BCHAR;
 #else
   typedef BYTE BCHAR;
 #endif
+#endif
 
 #ifndef _TEXTMETRIC_DEFINED
 #define _TEXTMETRIC_DEFINED
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#include <pshpack4.h>
+
   typedef struct tagTEXTMETRICA {
     LONG tmHeight;
     LONG tmAscent;
@@ -802,6 +868,8 @@ extern "C" {
   __MINGW_TYPEDEF_AW(PTEXTMETRIC)
   __MINGW_TYPEDEF_AW(NPTEXTMETRIC)
   __MINGW_TYPEDEF_AW(LPTEXTMETRIC)
+#include <poppack.h>
+#endif
 #endif
 
 #define NTM_REGULAR __MSABI_LONG(0x00000040)
@@ -815,6 +883,7 @@ extern "C" {
 #define NTM_TYPE1 0x00100000
 #define NTM_DSIG 0x00200000
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #include <pshpack4.h>
   typedef struct tagNEWTEXTMETRICA {
     LONG tmHeight;
@@ -889,7 +958,9 @@ extern "C" {
 
   __MINGW_TYPEDEF_AW(NEWTEXTMETRICEX)
 #endif
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagPELARRAY {
     LONG paXCount;
     LONG paYCount;
@@ -897,7 +968,8 @@ extern "C" {
     LONG paYExt;
     BYTE paRGBs;
   } PELARRAY,*PPELARRAY,*NPPELARRAY,*LPPELARRAY;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagLOGBRUSH {
     UINT lbStyle;
     COLORREF lbColor;
@@ -909,18 +981,23 @@ extern "C" {
     COLORREF lbColor;
     ULONG lbHatch;
   } LOGBRUSH32,*PLOGBRUSH32,*NPLOGBRUSH32,*LPLOGBRUSH32;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef LOGBRUSH PATTERN;
   typedef PATTERN *PPATTERN;
   typedef PATTERN *NPPATTERN;
   typedef PATTERN *LPPATTERN;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagLOGPEN {
     UINT lopnStyle;
     POINT lopnWidth;
     COLORREF lopnColor;
   } LOGPEN,*PLOGPEN,*NPLOGPEN,*LPLOGPEN;
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagEXTLOGPEN {
     DWORD elpPenStyle;
     DWORD elpWidth;
@@ -930,6 +1007,18 @@ extern "C" {
     DWORD elpNumEntries;
     DWORD elpStyleEntry[1];
   } EXTLOGPEN,*PEXTLOGPEN,*NPEXTLOGPEN,*LPEXTLOGPEN;
+#endif
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+  typedef struct tagEXTLOGPEN32 {
+    DWORD elpPenStyle;
+    DWORD elpWidth;
+    UINT elpBrushStyle;
+    COLORREF elpColor;
+    ULONG elpHatch;
+    DWORD elpNumEntries;
+    DWORD elpStyleEntry[1];
+  } EXTLOGPEN32, *PEXTLOGPEN32, *NPEXTLOGPEN32, *LPEXTLOGPEN32;
 
 #ifndef _PALETTEENTRY_DEFINED
 #define _PALETTEENTRY_DEFINED
@@ -943,7 +1032,6 @@ extern "C" {
 
 #ifndef _LOGPALETTE_DEFINED
 #define _LOGPALETTE_DEFINED
-
   typedef struct tagLOGPALETTE {
     WORD palVersion;
     WORD palNumEntries;
@@ -993,9 +1081,11 @@ extern "C" {
   __MINGW_TYPEDEF_AW(PLOGFONT)
   __MINGW_TYPEDEF_AW(NPLOGFONT)
   __MINGW_TYPEDEF_AW(LPLOGFONT)
+#endif /* WINAPI_PARTITION_APP */
 
 #define LF_FULLFACESIZE 64
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagENUMLOGFONTA {
     LOGFONTA elfLogFont;
     BYTE elfFullName[LF_FULLFACESIZE];
@@ -1027,6 +1117,7 @@ extern "C" {
 
   __MINGW_TYPEDEF_AW(ENUMLOGFONTEX)
   __MINGW_TYPEDEF_AW(LPENUMLOGFONTEX)
+#endif /* WINAPI_PARTITION_DESKTOP */
 
 #define OUT_DEFAULT_PRECIS 0
 #define OUT_STRING_PRECIS 1
@@ -1046,7 +1137,9 @@ extern "C" {
 #define CLIP_MASK 0xf
 #define CLIP_LH_ANGLES (1<<4)
 #define CLIP_TT_ALWAYS (2<<4)
+#if _WIN32_WINNT >= 0x0600
 #define CLIP_DFA_DISABLE (4<<4)
+#endif
 #define CLIP_EMBEDDED (8<<4)
 
 #define DEFAULT_QUALITY 0
@@ -1143,6 +1236,7 @@ extern "C" {
 
 #define PAN_CULTURE_LATIN 0
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagPANOSE {
     BYTE bFamilyType;
     BYTE bSerifStyle;
@@ -1294,6 +1388,7 @@ extern "C" {
   __MINGW_TYPEDEF_AW(PEXTLOGFONT)
   __MINGW_TYPEDEF_AW(NPEXTLOGFONT)
   __MINGW_TYPEDEF_AW(LPEXTLOGFONT)
+#endif /* WINAPI_PARTITION_APP */
 
 #define ELF_VERSION 0
 #define ELF_CULTURE_LATIN 0
@@ -1360,9 +1455,7 @@ extern "C" {
 #define DEVICE_DEFAULT_FONT 14
 #define DEFAULT_PALETTE 15
 #define SYSTEM_FIXED_FONT 16
-
 #define DEFAULT_GUI_FONT 17
-
 #define DC_BRUSH 18
 #define DC_PEN 19
 
@@ -1388,6 +1481,7 @@ extern "C" {
 #define HS_BDIAGONAL 3
 #define HS_CROSS 4
 #define HS_DIAGCROSS 5
+#define HS_API_MAX 12
 
 #define PS_SOLID 0
 #define PS_DASH 1
@@ -1456,11 +1550,8 @@ extern "C" {
 #define SCALINGFACTORY 115
 
 #define VREFRESH 116
-
 #define DESKTOPVERTRES 117
-
 #define DESKTOPHORZRES 118
-
 #define BLTALIGNMENT 119
 
 #define SHADEBLENDCAPS 120
@@ -1579,6 +1670,7 @@ extern "C" {
 
 #define CCHFORMNAME 32
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct _devicemodeA {
     BYTE dmDeviceName[CCHDEVICENAME];
     WORD dmSpecVersion;
@@ -1681,6 +1773,7 @@ extern "C" {
   __MINGW_TYPEDEF_AW(PDEVMODE)
   __MINGW_TYPEDEF_AW(NPDEVMODE)
   __MINGW_TYPEDEF_AW(LPDEVMODE)
+#endif
 
 #define DM_SPECVERSION 0x0401
 
@@ -1890,6 +1983,7 @@ extern "C" {
 #define DMDFO_STRETCH 1
 #define DMDFO_CENTER 2
 
+#define DM_INTERLACED 0x00000002
 #define DMDISPLAYFLAGS_TEXTMODE 0x00000004
 
 #define DMNUP_SYSTEM 1
@@ -1928,6 +2022,7 @@ extern "C" {
 
 #define DMDITHER_USER 256
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct _DISPLAY_DEVICEA {
     DWORD cb;
     CHAR DeviceName[32];
@@ -1936,6 +2031,7 @@ extern "C" {
     CHAR DeviceID[128];
     CHAR DeviceKey[128];
   } DISPLAY_DEVICEA,*PDISPLAY_DEVICEA,*LPDISPLAY_DEVICEA;
+
   typedef struct _DISPLAY_DEVICEW {
     DWORD cb;
     WCHAR DeviceName[32];
@@ -1948,6 +2044,7 @@ extern "C" {
   __MINGW_TYPEDEF_AW(DISPLAY_DEVICE)
   __MINGW_TYPEDEF_AW(PDISPLAY_DEVICE)
   __MINGW_TYPEDEF_AW(LPDISPLAY_DEVICE)
+#endif
 
 #define DISPLAY_DEVICE_ATTACHED_TO_DESKTOP 0x00000001
 #define DISPLAY_DEVICE_MULTI_DRIVER 0x00000002
@@ -1955,13 +2052,20 @@ extern "C" {
 #define DISPLAY_DEVICE_MIRRORING_DRIVER 0x00000008
 #define DISPLAY_DEVICE_VGA_COMPATIBLE 0x00000010
 #define DISPLAY_DEVICE_REMOVABLE 0x00000020
+#if _WIN32_WINNT >= 0x0602
+#define DISPLAY_DEVICE_ACC_DRIVER 0x00000040
+#endif
+#define DISPLAY_DEVICE_TS_COMPATIBLE 0x00200000
+#if _WIN32_WINNT >= 0x0600
+#define DISPLAY_DEVICE_UNSAFE_MODES_ON 0x00080000
+#endif
 #define DISPLAY_DEVICE_MODESPRUNED 0x08000000
+#define DISPLAY_DEVICE_RDPUDD 0x01000000
 #define DISPLAY_DEVICE_REMOTE 0x04000000
 #define DISPLAY_DEVICE_DISCONNECT 0x02000000
 
 #define DISPLAY_DEVICE_ACTIVE 0x00000001
 #define DISPLAY_DEVICE_ATTACHED 0x00000002
-
 
 #if WINVER >= 0x0601
 #define DISPLAYCONFIG_MAXPATH 1024
@@ -1991,6 +2095,7 @@ extern "C" {
     DISPLAYCONFIG_OUTPUT_TECHNOLOGY_MIRACAST = (int) 15,
     DISPLAYCONFIG_OUTPUT_TECHNOLOGY_INDIRECT_WIRED = (int) 16,
     DISPLAYCONFIG_OUTPUT_TECHNOLOGY_INDIRECT_VIRTUAL = (int) 17,
+    DISPLAYCONFIG_OUTPUT_TECHNOLOGY_DISPLAYPORT_USB_TUNNEL = (int) 18,
     DISPLAYCONFIG_OUTPUT_TECHNOLOGY_INTERNAL = (int) 0x80000000,
     DISPLAYCONFIG_OUTPUT_TECHNOLOGY_FORCE_UINT32 = (int) 0xFFFFFFFF
   } DISPLAYCONFIG_VIDEO_OUTPUT_TECHNOLOGY;
@@ -2143,9 +2248,10 @@ extern "C" {
 #define DISPLAYCONFIG_PATH_ACTIVE 0x00000001
 #define DISPLAYCONFIG_PATH_PREFERRED_UNSCALED 0x00000004
 #define DISPLAYCONFIG_PATH_SUPPORT_VIRTUAL_MODE 0x00000008
-#define DISPLAYCONFIG_PATH_VALID_FLAGS 0x0000000D
+#define DISPLAYCONFIG_PATH_BOOST_REFRESH_RATE 0x00000010
+#define DISPLAYCONFIG_PATH_VALID_FLAGS 0x0000001D
 
-  typedef enum {
+  typedef enum DISPLAYCONFIG_TOPOLOGY_ID {
     DISPLAYCONFIG_TOPOLOGY_INTERNAL = 0x1,
     DISPLAYCONFIG_TOPOLOGY_CLONE = 0x2,
     DISPLAYCONFIG_TOPOLOGY_EXTEND = 0x4,
@@ -2165,6 +2271,12 @@ extern "C" {
     DISPLAYCONFIG_DEVICE_INFO_GET_ADVANCED_COLOR_INFO = 9,
     DISPLAYCONFIG_DEVICE_INFO_SET_ADVANCED_COLOR_STATE = 10,
     DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL = 11,
+    DISPLAYCONFIG_DEVICE_INFO_GET_MONITOR_SPECIALIZATION = 12,
+    DISPLAYCONFIG_DEVICE_INFO_SET_MONITOR_SPECIALIZATION = 13,
+    DISPLAYCONFIG_DEVICE_INFO_SET_RESERVED1 = 14,
+    DISPLAYCONFIG_DEVICE_INFO_GET_ADVANCED_COLOR_INFO_2 = 15,
+    DISPLAYCONFIG_DEVICE_INFO_SET_HDR_STATE = 16,
+    DISPLAYCONFIG_DEVICE_INFO_SET_WCG_STATE = 17,
     DISPLAYCONFIG_DEVICE_INFO_FORCE_UINT32 = 0xFFFFFFFF
   } DISPLAYCONFIG_DEVICE_INFO_TYPE;
 
@@ -2281,10 +2393,90 @@ extern "C" {
     };
 } DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE;
 
+//#if (NTDDI_VERSION >= NTDDI_WIN11_GA)
+
+  typedef enum _DISPLAYCONFIG_ADVANCED_COLOR_MODE {
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_SDR,
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_WCG,
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_HDR
+  } DISPLAYCONFIG_ADVANCED_COLOR_MODE;
+
+  typedef struct _DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO_2 {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    __C89_NAMELESS union {
+      __C89_NAMELESS struct {
+        UINT32 advancedColorSupported : 1;
+        UINT32 advancedColorActive : 1;
+        UINT32 reserved1 : 1;
+        UINT32 advancedColorLimitedByPolicy : 1;
+        UINT32 highDynamicRangeSupported : 1;
+        UINT32 highDynamicRangeUserEnabled : 1;
+        UINT32 wideColorSupported : 1;
+        UINT32 wideColorUserEnabled : 1;
+        UINT32 reserved : 24;
+      };
+      UINT32 value;
+    };
+    DISPLAYCONFIG_COLOR_ENCODING colorEncoding;
+    UINT32 bitsPerColorChannel;
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE activeColorMode;
+  } DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO_2;
+
+  typedef struct _DISPLAYCONFIG_SET_HDR_STATE {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    __C89_NAMELESS union {
+      __C89_NAMELESS struct {
+        UINT32 enableHdr : 1;
+        UINT32 reserved : 31;
+      };
+      UINT32 value;
+    };
+  } DISPLAYCONFIG_SET_HDR_STATE;
+
+  typedef struct _DISPLAYCONFIG_SET_WCG_STATE {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    __C89_NAMELESS union {
+      __C89_NAMELESS struct {
+        UINT32 enableWcg : 1;
+        UINT32 reserved : 31;
+      };
+      UINT32 value;
+    };
+  } DISPLAYCONFIG_SET_WCG_STATE;
+
+//#endif /* (NTDDI_VERSION >= NTDDI_WIN11_GA) */
+
   typedef struct _DISPLAYCONFIG_SDR_WHITE_LEVEL {
     DISPLAYCONFIG_DEVICE_INFO_HEADER header;
     ULONG SDRWhiteLevel;
   } DISPLAYCONFIG_SDR_WHITE_LEVEL;
+
+  typedef struct _DISPLAYCONFIG_GET_MONITOR_SPECIALIZATION {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    __C89_NAMELESS union {
+      __C89_NAMELESS struct {
+        UINT32 isSpecializationEnabled : 1;
+        UINT32 isSpecializationAvailableForMonitor : 1;
+        UINT32 isSpecializationAvailableForSystem : 1;
+        UINT32 reserved : 29;
+      };
+      UINT32 value;
+    };
+  } DISPLAYCONFIG_GET_MONITOR_SPECIALIZATION;
+
+  typedef struct _DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION {
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    __C89_NAMELESS union {
+      __C89_NAMELESS struct {
+        UINT32 isSpecializationEnabled : 1;
+        UINT32 reserved : 31;
+      };
+      UINT32 value;
+    };
+    GUID specializationType;
+    GUID specializationSubType;
+    WCHAR specializationApplicationName[128];
+  } DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION;
 
 #endif /* WINAPI_PARTITION_DESKTOP */
 
@@ -2293,6 +2485,7 @@ extern "C" {
 #define QDC_DATABASE_CURRENT 0x00000004
 #define QDC_VIRTUAL_MODE_AWARE 0x00000010
 #define QDC_INCLUDE_HMD 0x00000020
+#define QDC_VIRTUAL_REFRESH_RATE_AWARE 0x00000040
 
 #define SDC_TOPOLOGY_INTERNAL 0x00000001
 #define SDC_TOPOLOGY_CLONE 0x00000002
@@ -2312,13 +2505,13 @@ extern "C" {
 #define SDC_FORCE_MODE_ENUMERATION      0x00001000
 #define SDC_ALLOW_PATH_ORDER_CHANGES    0x00002000
 #define SDC_VIRTUAL_MODE_AWARE          0x00008000
+#define SDC_VIRTUAL_REFRESH_RATE_AWARE  0x00020000
 
 #endif /* WINVER >= 0x0601 */
 
-
-
 #define RDH_RECTANGLES 1
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct _RGNDATAHEADER {
     DWORD dwSize;
     DWORD iType;
@@ -2331,9 +2524,11 @@ extern "C" {
     RGNDATAHEADER rdh;
     char Buffer[1];
   } RGNDATA,*PRGNDATA,*NPRGNDATA,*LPRGNDATA;
+#endif
 
 #define SYSRGN 4
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _ABC {
     int abcA;
     UINT abcB;
@@ -2345,9 +2540,11 @@ extern "C" {
     FLOAT abcfB;
     FLOAT abcfC;
   } ABCFLOAT,*PABCFLOAT,*NPABCFLOAT,*LPABCFLOAT;
+#endif
 
 #ifndef NOTEXTMETRIC
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _OUTLINETEXTMETRICA {
     UINT otmSize;
     TEXTMETRICA otmTextMetrics;
@@ -2423,7 +2620,9 @@ extern "C" {
   __MINGW_TYPEDEF_AW(NPOUTLINETEXTMETRIC)
   __MINGW_TYPEDEF_AW(LPOUTLINETEXTMETRIC)
 #endif
+#endif /* NOTEXTMETRIC */
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagPOLYTEXTA {
     int x;
     int y;
@@ -2448,7 +2647,9 @@ extern "C" {
   __MINGW_TYPEDEF_AW(PPOLYTEXT)
   __MINGW_TYPEDEF_AW(NPPOLYTEXT)
   __MINGW_TYPEDEF_AW(LPPOLYTEXT)
+#endif
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _FIXED {
     WORD fract;
     short value;
@@ -2468,12 +2669,12 @@ extern "C" {
     short gmCellIncX;
     short gmCellIncY;
   } GLYPHMETRICS,*LPGLYPHMETRICS;
+#endif
 
 #define GGO_METRICS 0
 #define GGO_BITMAP 1
 #define GGO_NATIVE 2
 #define GGO_BEZIER 3
-
 #define GGO_GRAY2_BITMAP 4
 #define GGO_GRAY4_BITMAP 5
 #define GGO_GRAY8_BITMAP 6
@@ -2486,6 +2687,7 @@ extern "C" {
 #define TT_PRIM_QSPLINE 2
 #define TT_PRIM_CSPLINE 3
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagPOINTFX {
     FIXED x;
     FIXED y;
@@ -2502,20 +2704,19 @@ extern "C" {
     DWORD dwType;
     POINTFX pfxStart;
   } TTPOLYGONHEADER,*LPTTPOLYGONHEADER;
+#endif
 
 #define GCP_DBCS 0x0001
 #define GCP_REORDER 0x0002
 #define GCP_USEKERNING 0x0008
 #define GCP_GLYPHSHAPE 0x0010
 #define GCP_LIGATE 0x0020
-
 #define GCP_DIACRITIC 0x0100
 #define GCP_KASHIDA 0x0400
 #define GCP_ERROR 0x8000
 #define FLI_MASK 0x103B
 
 #define GCP_JUSTIFY __MSABI_LONG(0x00010000)
-
 #define FLI_GLYPHS __MSABI_LONG(0x00040000)
 #define GCP_CLASSIN __MSABI_LONG(0x00080000)
 #define GCP_MAXEXTENT __MSABI_LONG(0x00100000)
@@ -2544,6 +2745,7 @@ extern "C" {
 #define GCPGLYPH_LINKBEFORE 0x8000
 #define GCPGLYPH_LINKAFTER 0x4000
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct tagGCP_RESULTSA {
     DWORD lStructSize;
     LPSTR lpOutString;
@@ -2575,10 +2777,12 @@ extern "C" {
     short wFlags;
     short nLanguageID;
   } RASTERIZER_STATUS,*LPRASTERIZER_STATUS;
+#endif
 
 #define TT_AVAILABLE 0x0001
 #define TT_ENABLED 0x0002
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct tagPIXELFORMATDESCRIPTOR {
     WORD nSize;
     WORD nVersion;
@@ -2607,6 +2811,7 @@ extern "C" {
     DWORD dwVisibleMask;
     DWORD dwDamageMask;
   } PIXELFORMATDESCRIPTOR,*PPIXELFORMATDESCRIPTOR,*LPPIXELFORMATDESCRIPTOR;
+#endif
 
 #define PFD_TYPE_RGBA 0
 #define PFD_TYPE_COLORINDEX 1
@@ -2629,11 +2834,14 @@ extern "C" {
 #define PFD_SWAP_LAYER_BUFFERS 0x00000800
 #define PFD_GENERIC_ACCELERATED 0x00001000
 #define PFD_SUPPORT_DIRECTDRAW 0x00002000
+#define PFD_DIRECT3D_ACCELERATED 0x00004000
+#define PFD_SUPPORT_COMPOSITION 0x00008000
 
 #define PFD_DEPTH_DONTCARE 0x20000000
 #define PFD_DOUBLEBUFFER_DONTCARE 0x40000000
 #define PFD_STEREO_DONTCARE 0x80000000
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #ifndef NOTEXTMETRIC
   typedef int (CALLBACK *OLDFONTENUMPROCA)(CONST LOGFONTA *,CONST TEXTMETRICA *,DWORD,LPARAM);
   typedef int (CALLBACK *OLDFONTENUMPROCW)(CONST LOGFONTW *,CONST TEXTMETRICW *,DWORD,LPARAM);
@@ -2716,6 +2924,7 @@ extern "C" {
 
   typedef UINT (CALLBACK *LPFNDEVMODE)(HWND,HMODULE,LPDEVMODE,LPSTR,LPSTR,LPDEVMODE,LPSTR,UINT);
   typedef DWORD (CALLBACK *LPFNDEVCAPS)(LPSTR,LPSTR,UINT,LPSTR,LPDEVMODE);
+#endif /* WINAPI_PARTITION_DESKTOP */
 
 #define DM_UPDATE 1
 #define DM_COPY 2
@@ -2781,6 +2990,7 @@ extern "C" {
 #define DCBA_FACEDOWNLEFT 0x0102
 #define DCBA_FACEDOWNRIGHT 0x0103
 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #define DeviceCapabilities __MINGW_NAME_AW(DeviceCapabilities)
 #define EnumFontFamiliesEx __MINGW_NAME_AW(EnumFontFamiliesEx)
 #define EnumFontFamilies __MINGW_NAME_AW(EnumFontFamilies)
@@ -2922,6 +3132,8 @@ extern "C" {
 
 #define STAMP_DESIGNVECTOR (0x8000000 + 'd' + ('v' << 8))
 #define STAMP_AXESLIST (0x8000000 + 'a' + ('l' << 8))
+#define STAMP_TRUETYPE_VARIATION (0x8000000 + 't' + ('v' << 8))
+#define STAMP_CFF2 (0x8000000 + 'c' + ('v' << 8))
 #define MM_MAX_NUMAXES 16
 
   typedef struct tagDESIGNVECTOR {
@@ -3082,6 +3294,35 @@ extern "C" {
   WINGDIAPI WINBOOL WINAPI SetTextJustification(HDC hdc,int extra,int count);
   WINGDIAPI WINBOOL WINAPI UpdateColors(HDC hdc);
 
+#if defined (COMBOX_SANDBOX) &&  _WIN32_WINNT >= 0x0600
+  typedef PVOID (WINAPI *GDIMARSHALLOC)(DWORD dwSize, LPVOID pGdiRef);
+  typedef HRESULT (WINAPI *DDRAWMARSHCALLBACKMARSHAL)(HGDIOBJ hGdiObj,
+                   LPVOID pGdiRef, LPVOID *ppDDrawRef);
+  typedef HRESULT (WINAPI *DDRAWMARSHCALLBACKUNMARSHAL)(LPVOID pData, HDC *phdc,
+                   LPVOID *ppDDrawRef);
+  typedef HRESULT (WINAPI *DDRAWMARSHCALLBACKRELEASE)(LPVOID pDDrawRef);
+
+#define GDIREGISTERDDRAWPACKETVERSION 0x1
+
+  typedef struct {
+    DWORD dwSize;
+    DWORD dwVersion;
+    DDRAWMARSHCALLBACKMARSHAL pfnDdMarshal;
+    DDRAWMARSHCALLBACKUNMARSHAL pfnDdUnmarshal;
+    DDRAWMARSHCALLBACKRELEASE pfnDdRelease;
+  } GDIREGISTERDDRAWPACKET, *PGDIREGISTERDDRAWPACKET;
+
+WINGDIAPI BOOL WINAPI GdiRegisterDdraw(PGDIREGISTERDDRAWPACKET pPacket,
+                                       GDIMARSHALLOC *ppfnGdiAlloc);
+WINGDIAPI ULONG WINAPI GdiMarshalSize(VOID);
+WINGDIAPI VOID WINAPI GdiMarshal(DWORD dwProcessIdTo, HGDIOBJ hGdiObj,
+                                 PVOID pData, ULONG ulFlags);
+WINGDIAPI HGDIOBJ WINAPI GdiUnmarshal(PVOID pData, ULONG ulFlags);
+#endif
+
+#endif /* WINAPI_PARTITION_DESKTOP */
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef USHORT COLOR16;
 
   typedef struct _TRIVERTEX {
@@ -3092,7 +3333,8 @@ extern "C" {
     COLOR16 Blue;
     COLOR16 Alpha;
   } TRIVERTEX,*PTRIVERTEX,*LPTRIVERTEX;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
   typedef struct _GRADIENT_TRIANGLE {
     ULONG Vertex1;
     ULONG Vertex2;
@@ -3103,19 +3345,23 @@ extern "C" {
     ULONG UpperLeft;
     ULONG LowerRight;
   } GRADIENT_RECT,*PGRADIENT_RECT,*LPGRADIENT_RECT;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
   typedef struct _BLENDFUNCTION {
     BYTE BlendOp;
     BYTE BlendFlags;
     BYTE SourceConstantAlpha;
     BYTE AlphaFormat;
   } BLENDFUNCTION,*PBLENDFUNCTION;
-
+#endif
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #define AC_SRC_OVER 0x00
 #define AC_SRC_ALPHA 0x01
 
   WINGDIAPI WINBOOL WINAPI AlphaBlend(HDC hdcDest,int xoriginDest,int yoriginDest,int wDest,int hDest,HDC hdcSrc,int xoriginSrc,int yoriginSrc,int wSrc,int hSrc,BLENDFUNCTION ftn);
+  WINGDIAPI WINBOOL WINAPI GdiAlphaBlend(HDC hdcDest,int xoriginDest,int yoriginDest,int wDest,int hDest,HDC hdcSrc,int xoriginSrc,int yoriginSrc,int wSrc,int hSrc,BLENDFUNCTION ftn);
   WINGDIAPI WINBOOL WINAPI TransparentBlt(HDC hdcDest,int xoriginDest,int yoriginDest,int wDest,int hDest,HDC hdcSrc,int xoriginSrc,int yoriginSrc,int wSrc,int hSrc,UINT crTransparent);
+  WINGDIAPI WINBOOL WINAPI GdiTransparentBlt(HDC hdcDest,int xoriginDest,int yoriginDest,int wDest,int hDest,HDC hdcSrc,int xoriginSrc,int yoriginSrc,int wSrc,int hSrc,UINT crTransparent);
 
 #define GRADIENT_FILL_RECT_H 0x00000000
 #define GRADIENT_FILL_RECT_V 0x00000001
@@ -3123,6 +3369,7 @@ extern "C" {
 #define GRADIENT_FILL_OP_FLAG 0x000000ff
 
   WINGDIAPI WINBOOL WINAPI GradientFill(HDC hdc,PTRIVERTEX pVertex,ULONG nVertex,PVOID pMesh,ULONG nMesh,ULONG ulMode);
+  WINGDIAPI WINBOOL WINAPI GdiGradientFill(HDC hdc,PTRIVERTEX pVertex,ULONG nVertex,PVOID pMesh,ULONG nMesh,ULONG ulMode);
 
 #ifndef NOMETAFILE
 
@@ -3186,6 +3433,11 @@ extern "C" {
   WINGDIAPI HBITMAP WINAPI CreateDIBSection(HDC hdc,CONST BITMAPINFO *lpbmi,UINT usage,VOID **ppvBits,HANDLE hSection,DWORD offset);
   WINGDIAPI UINT WINAPI GetDIBColorTable(HDC hdc,UINT iStart,UINT cEntries,RGBQUAD *prgbq);
   WINGDIAPI UINT WINAPI SetDIBColorTable(HDC hdc,UINT iStart,UINT cEntries,CONST RGBQUAD *prgbq);
+
+#define GDI_WIDTHBYTES(bits) ((DWORD)(((bits)+31) & (~31)) / 8)
+#define GDI_DIBWIDTHBYTES(bi) (DWORD)GDI_WIDTHBYTES((DWORD)(bi).biWidth * (DWORD)(bi).biBitCount)
+#define GDI__DIBSIZE(bi) (GDI_DIBWIDTHBYTES(bi) * (DWORD)(bi).biHeight)
+#define GDI_DIBSIZE(bi) ((bi).biHeight < 0 ? (-1)*(GDI__DIBSIZE(bi)) : GDI__DIBSIZE(bi))
 
 #define CA_NEGATIVE 0x0001
 #define CA_LOG_FILTER 0x0002
@@ -3338,9 +3590,9 @@ extern "C" {
   WINGDIAPI WINBOOL WINAPI GetDCOrgEx(HDC hdc,LPPOINT lppt);
   WINGDIAPI WINBOOL WINAPI FixBrushOrgEx(HDC hdc,int x,int y,LPPOINT ptl);
   WINGDIAPI WINBOOL WINAPI UnrealizeObject(HGDIOBJ h);
-  WINGDIAPI WINBOOL WINAPI GdiFlush();
+  WINGDIAPI WINBOOL WINAPI GdiFlush(void);
   WINGDIAPI DWORD WINAPI GdiSetBatchLimit(DWORD dw);
-  WINGDIAPI DWORD WINAPI GdiGetBatchLimit();
+  WINGDIAPI DWORD WINAPI GdiGetBatchLimit(void);
 
 #define ICM_OFF 1
 #define ICM_ON 2
@@ -4123,7 +4375,7 @@ extern "C" {
 #define EPS_SIGNATURE 0x46535045
 #define GDICOMMENT_UNICODE_STRING 0x00000040
 #define GDICOMMENT_UNICODE_END 0x00000080
-#endif
+#endif /* NOMETAFILE */
 
 #define wglUseFontBitmaps __MINGW_NAME_AW(wglUseFontBitmaps)
 
@@ -4250,7 +4502,9 @@ extern "C" {
   WINGDIAPI DWORD WINAPI wglSwapMultipleBuffers(UINT,CONST WGLSWAP *);
 #endif
 
+#endif /* WINAPI_PARTITION_DESKTOP */
+
 #ifdef __cplusplus
 }
 #endif
-#endif
+#endif /* _WINGDI_ */
